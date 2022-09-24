@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css" type="text/css">
+    <title>Jogo da Velha</title>
+</head>
+<body>
+    <h1>Jogo da Velha</h1>
+    <section class="stage">
+        <div class="containerControlls">
+            <div class="players">
+                <h2 class="choise">Escolha quem começa</h2>
+                <a class="player1" onclick="firstO()">Player 1: O</a><br><br>
+                <br>
+                <a class="player2" onclick="firstX()">Player 2: X</a>
+                <br><br>
+                <h2 class="maybe">Deseja Reiniciar?</h2>
+                <a class="restart" onclick="restartGame()">Restart</a>
+            </div>
+        </div>
+        <div class="containerGame">
+        <div>
+            <div id="0" class="square"></div>
+            <div id="1" class="square"></div>
+            <div id="2" class="square"></div>
+        </div>
+        <div>
+            <div id="3" class="square"></div>
+            <div id="4" class="square"></div>
+            <div id="5" class="square"></div>
+        </div>
+        <div>
+            <div id="6" class="square"></div>
+            <div id="7" class="square"></div>
+            <div id="8" class="square"></div>
+        </div>
+    </div>
+    <div class="containerControlls2">
+        <h2>Placar</h2>
+        <div class="placar">
+            <p class="a">Player 1: <span id="iner">0</span></p><p class="b">Player 2: <span id="inner">0</span></p>
+        </div>
+    </div>
+    </section>
+    
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/interface.js"></script>
+</body>
+</html>

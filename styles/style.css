@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+section {
+  width: 75%;
+}
+.containerGame {
+  grid-area: gm;
+}
+.containerControlls {
+  grid-area: c1;
+  margin: auto;
+}
+.choise {
+  margin-bottom: 40px;
+  color: crimson;
+}
+a {
+  position: relative;
+  padding: 10px 30px;
+  margin: 0 15px;
+  color: aqua;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  transition: 0.2s;
+  overflow: hidden;
+  cursor: pointer;
+}
+a:nth-child(2) {
+  filter: hue-rotate(270deg);
+}
+a:nth-child(10) {
+  filter: hue-rotate(115deg);
+}
+a:hover {
+  background: aqua;
+  color: #111;
+  box-shadow: 0 0 50px aqua;
+  transition-delay: 0.2s;
+}
+a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid aqua;
+  border-left: 2px solid aqua;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+a:hover:before {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0.2s;
+}
+a:hover:after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0.2s;
+}
+a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid aqua;
+  border-right: 2px solid aqua;
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+.maybe {
+  margin: 10px 0 10px 0;
+  color: gold;
+}
+.containerControlls2 {
+  grid-area: c2;
+  margin: auto;
+  font-size: 25px;
+}
+.placar {
+  font-weight: bold;
+}
+.a {
+  color: #92ed00;
+  margin-bottom: 5px;
+}
+.b {
+  color: #00ffff;
+}
+.containerControlls2 > h2 {
+  margin-bottom: 10px;
+}
+h1 {
+  margin-top: 10%;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.stage {
+  display: grid;
+  grid-template-areas:
+    "c1 gm c2"
+    "c1 gm c2"
+    "c1 gm c2"
+    "c1 gm c2"
+    "c1 gm c2";
+  text-align: center;
+  margin: 0 auto;
+  max-width: 1500px;
+}
+.square {
+  width: 150px;
+  height: 150px;
+  background-color: beige;
+  border: 1px solid grey;
+  display: inline-block;
+}
+.o {
+  position: relative;
+}
+.o:after {
+  position: absolute;
+  content: "\2B55";
+  font-size: 50px;
+  line-height: 150px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.x {
+  position: relative;
+}
+.x:after {
+  position: absolute;
+  content: "\274C";
+  font-size: 50px;
+  line-height: 150px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.restart {
+  display: inline-block;
+}
+
+@media screen and (max-width: 1024px) {
+  section {
+    width: 86%;
+  }
+  .stage {
+    grid-template-areas: "c1 c1 c1" "gm gm gm" "gm gm gm" "gm gm gm" "gm gm gm" "gm gm gm" "c2 c2 c2";
+  }
+  .o:after,
+  .x:after {
+    line-height: 150px;
+  }
+  .square {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 600px) {
+  section {
+    width: 90%;
+  }
+  .stage {
+    grid-template-areas: "c1 c1 c1" "gm gm gm" "gm gm gm" "gm gm gm" "gm gm gm" "gm gm gm" "c2 c2 c2";
+  }
+  .o:after,
+  .x:after {
+    line-height: 90px;
+  }
+  .square {
+    width: 90px;
+    height: 90px;
+  }
+}
